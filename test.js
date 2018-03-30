@@ -1,5 +1,4 @@
 const nonly = require('./nonly')
-const split = nonly.split
 const assert = require('assert')
 
 const runTests = () => {
@@ -38,10 +37,9 @@ const runTests = () => {
         }
       }
     }
-  }, 'user.firstName, user.lastName, session.loggedIn, a.very.deeply.nested.object'), {
+  }, 'user.firstName, session.loggedIn, a.very.deeply.nested.object'), {
     user: {
-      firstName:'John',
-      lastName:'Doe'
+      firstName:'John'
     },
     session: {
       loggedIn: true
@@ -61,11 +59,16 @@ const runTests = () => {
 runTests()
 
 function test(val, exp) {
-  process.stdout.write(`${JSON.stringify(val)} === ${JSON.stringify(exp)}... `)
+  process.stdout.write(`${JSON.stringify(val)}\n${JSON.stringify(exp)}\n`)
   try {
     assert.deepEqual(val, exp)
     console.log('✅')
   } catch (e) {
-    console.log('🚫', e.message)
+    console.log('🚫  TEST FAILED')
+    console.log('Expected:')
+    console.error(e.expected)
+    console.log('Actual:')
+    console.error(e.actual)
+    process.exit(-1)
   }
 }

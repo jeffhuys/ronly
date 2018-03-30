@@ -1,0 +1,11 @@
+{
+  "name": "nonly",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jeff Huijsmans <jeff@bleeve.nl>",
+  "license": "MIT",
+  "description": "Recursive (nested) only, no dependencies",
+  "scripts": {
+    "test": "node test"
+  }
+}
