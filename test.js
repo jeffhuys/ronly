@@ -1,24 +1,24 @@
-const nonly = require('./nonly')
+const ronly = require('./ronly')
 const assert = require('assert')
 
 const runTests = () => {
-  // Test nonly
+  // Test ronly
   const aa          = '1', ab = {lal: 'lol', lok: 'lak'}, b = '2', c = '3'
 
   const obj0        = { aa, b, c }
-  test(nonly(obj0, 'aa, b'),  { aa, b })
-  test(nonly(obj0, 'aa b'),   { aa, b })
-  test(nonly(obj0, 'aa b c'), { aa, b, c })
+  test(ronly(obj0, 'aa, b'),  { aa, b })
+  test(ronly(obj0, 'aa b'),   { aa, b })
+  test(ronly(obj0, 'aa b c'), { aa, b, c })
 
   const obj1        = { test: { aa, ab, b }, c}
-  test(nonly(obj1, 'test'),             { test: { aa, ab, b } })
-  test(nonly(obj1, 'test.aa'),          { test: { aa } })
-  test(nonly(obj1, 'test.ab'),          { test: { ab } })
-  test(nonly(obj1, 'test.aa, test.ab'), { test: { aa, ab } })
-  test(nonly(obj1, 'test.ab.lal'),      { test: { ab: { lal: 'lol' } } })
+  test(ronly(obj1, 'test'),             { test: { aa, ab, b } })
+  test(ronly(obj1, 'test.aa'),          { test: { aa } })
+  test(ronly(obj1, 'test.ab'),          { test: { ab } })
+  test(ronly(obj1, 'test.aa, test.ab'), { test: { aa, ab } })
+  test(ronly(obj1, 'test.ab.lal'),      { test: { ab: { lal: 'lol' } } })
 
   // The mother of all tests :D
-  test(nonly({
+  test(ronly({
     user: {
       firstName: 'John',
       lastName: 'Doe',
