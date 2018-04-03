@@ -2,7 +2,7 @@
   "name": "ronly",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Jeff Huijsmans <jeff@bleeve.nl>",
+  "author": "Jeff Huijsmans <jeffhuys@gmail.com>",
   "license": "MIT",
   "description": "Recursive (nested) only, no dependencies",
   "scripts": {
