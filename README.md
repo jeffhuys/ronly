@@ -1,4 +1,5 @@
-# ronly - Recursive (nested) only
+# ronly - Recursive (nested) only  
+[![CircleCI](https://circleci.com/gh/jeffhuys/ronly/tree/master.svg?style=svg)](https://circleci.com/gh/jeffhuys/ronly/tree/master)  
 Return whitelisted paths of an object.
 
 I took the effort to make this module as compatible as possible with older versions of Javascript. Please open an issue if you encounter any problems.
