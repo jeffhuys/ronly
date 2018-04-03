@@ -1,10 +1,13 @@
 {
   "name": "ronly",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "author": "Jeff Huijsmans <jeffhuys@gmail.com>",
   "license": "MIT",
-  "description": "Recursive (nested) only, no dependencies",
+  "repository": "https://github.com/jeffhuys/ronly",
+  "bugs": "https://github.com/jeffhuys/ronly/issues",
+  "description": "Recursive only, no dependencies. Returns whitelisted properties of a (nested) object",
+  "keywords": ["utility", "util", "object", "whitelist", "recursive", "nested", "only", "filter"],
   "scripts": {
     "test": "mocha"
   },
